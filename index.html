@@ -4,227 +4,346 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="assets/css/styles.css" />
-
-    <!-- =====BOX ICONS===== -->
+    <!--=============== FAVICON ===============-->
     <link
-      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="shortcut icon"
+      href="./assets/img/favicon.png"
+      type="image/x-icon"
+    />
+
+    <!--=============== REMIX ICONS ===============-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
 
-    <title>Portfolio website complete</title>
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Portfolio - Asadbek</title>
   </head>
   <body>
-    <!--===== HEADER =====-->
-    <header class="l-header">
-      <nav class="nav bd-grid">
-        <div>
-          <a href="#" class="nav__logo">Asadbek</a>
-        </div>
+    <!--=============== HEADER ===============-->
+    <header class="profile container">
+      <!-- Theme button -->
+      <i class="ri-moon-line change-theme" id="theme-button"></i>
 
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#home" class="nav__link active">Home</a>
-            </li>
-            <li class="nav__item">
-              <a href="#about" class="nav__link">About</a>
-            </li>
-            <li class="nav__item">
-              <a href="#skills" class="nav__link">Skills</a>
-            </li>
-            <li class="nav__item">
-              <a href="#work" class="nav__link">Work</a>
-            </li>
-            <li class="nav__item">
-              <a href="#contact" class="nav__link">Contact</a>
-            </li>
+      <div class="profile__container grid">
+        <div class="profile__data">
+          <div class="profile__border">
+            <div class="profile__perfil">
+              <!-- Insert your image, according to the example size of the portfolio -->
+              <img src="assets/img/perfil.png" alt="" />
+            </div>
+          </div>
+
+          <h2 class="profile__name">Asadbek Obidjonov</h2>
+          <h3 class="profile__profession">Web developer & UX/UI designer</h3>
+
+          <ul class="profile__social">
+            <a
+              href="https://www.instagram.com/bek_obidjonov"
+              target="_blank"
+              class="profile__social-link"
+            >
+              <i class="ri-instagram-line"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/bekobidjonov"
+              target="_blank"
+              class="profile__social-link"
+            >
+              <i class="ri-linkedin-box-line"></i>
+            </a>
+            <a
+              href="https://github.com/bekobidjonov"
+              target="_blank"
+              class="profile__social-link"
+            >
+              <i class="ri-github-line"></i>
+            </a>
           </ul>
         </div>
 
-        <div class="nav__toggle" id="nav-toggle">
-          <i class="bx bx-menu"></i>
+        <div class="profile__info grid">
+          <div class="profile__info-group">
+            <h3 class="profile__info-number">2</h3>
+            <p class="profile__info-description">
+              Years of <br />
+              experience
+            </p>
+          </div>
+          <div class="profile__info-group">
+            <h3 class="profile__info-number">+10</h3>
+            <p class="profile__info-description">
+              Completed <br />
+              projects
+            </p>
+          </div>
+          <div class="profile__info-group">
+            <h3 class="profile__info-number">8</h3>
+            <p class="profile__info-description">
+              Satisfied <br />
+              customers
+            </p>
+          </div>
         </div>
-      </nav>
+
+        <div class="profile__buttons">
+          <!-- Insert your CV -->
+          <a download="" href="./assets/pdf/Portfolio.pdf" class="button">
+            Download CV <i class="ri-download-line"></i>
+          </a>
+
+          <div class="profile__buttons-small">
+            <!-- Insert a real number plus country code -->
+            <a
+              href="https://api.whatsapp.com/send?phone=+818058477781&text=Hello, more information!"
+              target="_blank"
+              class="button button__small button__gray"
+            >
+              <i class="ri-whatsapp-line"></i>
+            </a>
+            <!-- Insert your brand name or profile -->
+            <a
+              href="https://www.facebook.com/asadbek.obidjonov"
+              target="_blank"
+              class="button button__small button__gray"
+            >
+              <i class="ri-messenger-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </header>
 
-    <main class="l-main">
-      <!-- Home -->
-      <section class="home bd-grid" id="home">
-        <div class="home__data">
-          <h1 class="home__title">
-            Hi, <br />I'm <span class="home__title-color">Asadbek</span><br />
-            Web Designer
-          </h1>
+    <!--=============== MAIN ===============-->
+    <main class="main">
+      <section class="filters container">
+        <!--=============== FILTERS TABS ===============-->
+        <ul class="filters__content">
+          <button
+            class="filters__button filter-tab-active"
+            data-target="#projects"
+          >
+            Projects
+          </button>
+          <button class="filters__button" data-target="#skills">Skills</button>
+        </ul>
 
-          <a href="#" class="button">Contact</a>
-        </div>
+        <div class="filters__sections">
+          <!--=============== PROJECTS ===============-->
+          <div
+            class="projects__content grid filters__active"
+            data-content
+            id="projects"
+          >
+            <article class="projects__card">
+              <!-- Insert your image in a rectangular format (Ex: 600 x 400, 1000 x 800, 1200 x 1000, etc) -->
+              <img src="assets/img/project1.jpg" alt="" class="projects__img" />
 
-        <div class="home__social">
-          <a href="#" class="home__social-icon"
-            ><i class="bx bxl-linkedin"></i
-          ></a>
-          <a href="#" class="home__social-icon"
-            ><i class="bx bxl-behance"></i
-          ></a>
-          <a href="#" class="home__social-icon"
-            ><i class="bx bxl-github"></i
-          ></a>
-        </div>
-
-        <div class="home__img">
-          <img src="assets/img/perfil.png" alt="" />
-        </div>
-      </section>
-
-      <!-- ABOUT -->
-      <section class="about sectioin" id="about">
-        <h2 class="section-title">About</h2>
-
-        <div class="about__container bd-grid">
-          <div class="about__img">
-            <img src="assets/img/about.jpg" alt="" />
-          </div>
-
-          <div>
-            <h2 class="about__subtitle">I'm Asadbek</h2>
-            <p class="about__text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat
-              ut voluptates soluta, aut earum nemo recusandae cumque
-              perferendis! Recusandae alias accusamus atque.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- SKILLS -->
-      <section class="skills section" id="skills">
-        <h2 class="section-title">Skills</h2>
-
-        <div class="skills__container bd-grid">
-          <div>
-            <h2 class="section__subtitle">Professional Skills</h2>
-            <p class="skills__text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum
-              obcaecati et nesciunt quasi expedita quos placeat repellat
-              praesentium vero nulla a omnis commodi laboriosam ut, itaque
-              repudiandae dolorum quisquam. Similique!
-            </p>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxl-html5 skills__icon"></i>
-                <span class="skills">HTML5</span>
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web</span>
+                  <h3 class="projects__title">Landing page for Consulting</h3>
+                  <a
+                    href="https://youtu.be/--6SCNsfXZ0"
+                    class="projects__button button button__small"
+                  >
+                    <i class="ri-link"></i>
+                  </a>
+                </div>
               </div>
-              <div class="skills__bar skills__html"></div>
-              <div>
-                <span class="skills__percentage">95%</span>
+            </article>
+
+            <article class="projects__card">
+              <img src="assets/img/project2.jpg" alt="" class="projects__img" />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web</span>
+                  <h3 class="projects__title">Portfolio website</h3>
+                  <a
+                    href="bekobidjonov.netlify.app"
+                    class="projects__button button button__small"
+                  >
+                    <i class="ri-link"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img src="assets/img/project3.jpg" alt="" class="projects__img" />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Design</span>
+                  <h3 class="projects__title">Educational Platform</h3>
+                  <a
+                    href="https://www.figma.com/file/mx19nIfeFtceBkWWuuWvOp/HighEd?node-id=0%3A1"
+                    class="projects__button button button__small"
+                  >
+                    <i class="ri-link"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img src="assets/img/project5.jpg" alt="" class="projects__img" />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Design</span>
+                  <h3 class="projects__title">Portfolio UX/UI</h3>
+                  <a
+                    href="https://www.figma.com/file/Oy93qlBAaiubeau1oyQafw/Portfolio?node-id=0%3A1"
+                    class="projects__button button button__small"
+                  >
+                    <i class="ri-link"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!--=============== SKILLS ===============-->
+          <div class="skills__content grid" data-content id="skills">
+            <div class="skills__area">
+              <h3 class="skills__title">Frontend Developer</h3>
+
+              <div class="skills__box">
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">HTML</h3>
+                      <span class="skills__level">Basic</span>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">CSS</h3>
+                      <span class="skills__level">Advanced</span>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">JavaScript</h3>
+                      <span class="skills__level">Intermediate</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">React</h3>
+                      <span class="skills__level">Intermediate</span>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">Bootstrap</h3>
+                      <span class="skills__level">Intermediate</span>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">Git</h3>
+                      <span class="skills__level">Intermediate</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxl-css3 skills__icon"></i>
-                <span class="skills">CSS3</span>
-              </div>
-              <div class="skills__bar skills__css"></div>
-              <div>
-                <span class="skills__percentage">85%</span>
+
+            <div class="skills__area">
+              <h3 class="skills__title">Backend Developer</h3>
+
+              <div class="skills__box">
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">PHP</h3>
+                      <span class="skills__level">Intermediate</span>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">MySQL</h3>
+                      <span class="skills__level">Advance</span>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">Firebase</h3>
+                      <span class="skills__level">Intermediate</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">Python</h3>
+                      <span class="skills__level">Basic</span>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">Node Js</h3>
+                      <span class="skills__level">Intermediate</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxl-javascript skills__icon"></i>
-                <span class="skills">JAVASCRIPT</span>
-              </div>
-              <div class="skills__bar skills__js"></div>
-              <div>
-                <span class="skills__percentage">65%</span>
-              </div>
-            </div>
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxs-paint skills__icon"></i>
-                <span class="skills">UX/UI</span>
-              </div>
-              <div class="skills__bar skills__ux"></div>
-              <div>
-                <span class="skills__percentage">85%</span>
-              </div>
-            </div>
           </div>
-
-          <div>
-            <img src="assets/img/work3.png" alt="" class="skills__img" />
-          </div>
-        </div>
-      </section>
-
-      <!-- WORK -->
-      <section class="work section" id="work">
-        <h2 class="section-title">Work</h2>
-
-        <div class="work__container bd-grid">
-          <div class="work__img">
-            <img src="assets/img/work1.jpg" alt="" />
-          </div>
-          <div class="work__img">
-            <img src="assets/img/work2.jpg" alt="" />
-          </div>
-          <div class="work__img">
-            <img src="assets/img/work3.png" alt="" />
-          </div>
-          <div class="work__img">
-            <img src="assets/img/work4.jpg" alt="" />
-          </div>
-          <div class="work__img">
-            <img src="assets/img/work5.jpg" alt="" />
-          </div>
-          <div class="work__img">
-            <img src="assets/img/work6.jpg" alt="" />
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section class="contact section" id="contact">
-        <h2 class="section-title">Contact</h2>
-
-        <div class="contact__container bd-grid">
-          <form action="" class="contact__form0">
-            <input type="text" placeholder="Name" class="contact__input" />
-            <input type="mail" placeholder="e-mail" class="contact__input" />
-            <textarea
-              name=""
-              id=""
-              cols="0"
-              rows="10"
-              class="contact__input"
-            ></textarea>
-            <input
-              type="button"
-              value="Enviar"
-              class="contact__button button"
-            />
-          </form>
         </div>
       </section>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-      <p class="footer-title">Asadbek Obidjonov</p>
-      <div class="footer__social">
-        <a href="#" class="footer__icon"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="footer__icon"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="footer__icon"><i class="bx bxl-twitter"></i></a>
-      </div>
-      <p>&#169; 2022 copyright all rights reserved</p>
+    <!--=============== FOOTER ===============-->
+    <footer class="footer container">
+      <span class="footer__copy">
+        &#169; Asadbek Obidjonov. All rigths reserved
+      </span>
     </footer>
 
-    <!--===== SCROLL REVEAL =====-->
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
 
-    <!--===== MAIN JS =====-->
+    <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
   </body>
 </html>
